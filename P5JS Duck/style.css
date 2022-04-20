@@ -1,0 +1,56 @@
+html {
+  height:100%
+}
+
+body{
+  margin: 0;
+  height:100%;
+
+}
+canvas {
+  display: block;
+}
+
+
+
+.header {
+  display:flex;
+  background-color:navy;
+  color:aliceblue;
+  margin:200;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+canvas {
+  position:absolute;
+  top:30%;
+  left:15%;
+  
+}
+
+p {
+  color:black;
+}
+
+.catalogue {
+  position:absolute;
+  top:10%;
+  left:12.5%;
+  font-family: 'Helvetica';
+  
+  width: 300px;
+  height: 100px;
+
+  border-width: 1px;
+  border-style: solid;
+  border-color:darkblue;
+
+  padding: 20px 60px 0px 40px;
+  margin: 40px 60px;
+
+}
+
+
+ 
