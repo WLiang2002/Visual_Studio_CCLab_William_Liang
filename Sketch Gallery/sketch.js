@@ -3,7 +3,8 @@ let x = 0;
 let y = 0;
 
 function setup() {
-  createCanvas(400, 400);
+  let canvas = createCanvas(600, 600);
+  canvas.id ("my-duck");
   background(20);
   speedX = random(-1, 1);
   speedY = random(-1, 1);

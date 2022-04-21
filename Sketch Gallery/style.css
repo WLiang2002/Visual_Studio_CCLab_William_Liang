@@ -5,10 +5,17 @@ html {
 body{
   margin: 0;
   height:100%;
+  background-color:#c7eaec;
 
 }
 canvas {
   display: block;
+}
+
+#my-duck {
+  position:absolute;
+  top:20%;
+  right:37.5%;
 }
 
 
@@ -23,34 +30,102 @@ canvas {
   
 }
 
-canvas {
-  position:absolute;
-  top:30%;
-  left:15%;
-  
-}
-
-p {
-  color:black;
-}
-
-.catalogue {
+.title {
   position:absolute;
   top:10%;
-  left:12.5%;
-  font-family: 'Helvetica';
+  left:35%;
+  font-family:cursive;
+  color:red;
   
-  width: 300px;
+  width: 600px;
+  height: 100px;
+
+  border-width: 1px;
+  border-style:hidden;
+  
+
+  padding: 20px 60px 20px 40px;
+  margin: 40px 60px;
+
+}
+
+#actions {
+  
+  position:absolute;
+  top:30%;
+  right:27%;
+  
+  
+  width: 150px;
   height: 100px;
 
   border-width: 1px;
   border-style: solid;
-  border-color:darkblue;
+  background-color: cadetblue;
+  border-radius:20px;
+
+  padding: 20px 30px 20px 40px;
+
+}
+
+
+
+
+.image {
+  position:fixed;
+  top:7%;
+  
+}
+
+.button {
+  position:absolute;
+  top:10%;
+  right:5%;
+  text-align: center;
+  background-color:darkblue;
+  padding: 30px 30px 30px 30px;
+  color:#c7eaec;
+  border-radius: 30px;
+  text-decoration:none;
+  font-size:18px;
+}
+
+.button:hover{
+  position:absolute;
+  top:10%;
+  right:5%;
+  text-align: center;
+  background-color:cadetblue;
+  padding: 30px 30px 30px 30px;
+  color:darkblue;
+  border-radius: 30px;
+  text-decoration:none;
+  font-size:18px;
+}
+
+
+.catalogue {
+  position:absolute;
+  top:65%;
+  left:35%;
+  
+  
+  width: 800px;
+  height: 100px;
+
+  border-width: 1px;
+  border-style: hidden;
+  
 
   padding: 20px 60px 0px 40px;
   margin: 40px 60px;
 
 }
 
+p {
+  color:black;
+  font-family:'Lucida Sans', sans-serif;
+
+}
 
  
