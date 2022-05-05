@@ -68,7 +68,7 @@ html, body {
 #homeButton {
     position:absolute;
     top:10%;
-    right:5%;
+    left:5%;
     text-align: center;
     background-color:#548999;
     padding: 30px 30px 30px 30px;
@@ -82,7 +82,7 @@ html, body {
     position:absolute;
     text-decoration:none;
     top:10%;
-    right:5%;
+    left:5%;
     text-align: center;
     background-color:#D3DBE0;
     padding: 30px 30px 30px 30px;
