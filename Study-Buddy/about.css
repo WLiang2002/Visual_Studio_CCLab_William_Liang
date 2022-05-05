@@ -1,0 +1,58 @@
+html, body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  canvas {
+    display: block;
+  }
+  
+  body {
+    background-color: #89b4c4;
+  }
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Bebas Neue', cursive;
+}
+
+
+p {
+    
+   text-align: center;
+   
+    font-size: 25px;
+    font-family: 'Bebas Neue', cursive;
+    margin-left: 35%;
+    margin-right:35%;
+}
+
+
+
+  #aboutButton {
+    position:absolute;
+    top:10%;
+    left:5%;
+    text-align: center;
+    background-color:#548999;
+    padding: 30px 30px 30px 30px;
+    color:#c7eaec;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size:18px;
+  }
+  
+  #aboutButton:hover{
+    position:absolute;
+    text-decoration:none;
+    top:10%;
+    left:5%;
+    text-align: center;
+    background-color:#D3DBE0;
+    padding: 30px 30px 30px 30px;
+    color:darkblue;
+    border-radius: 30px;
+    font-size:18px;
+  }
+  
