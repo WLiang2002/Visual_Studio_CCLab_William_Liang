@@ -1,51 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-      
+
+<head>
+    <link rel="stylesheet" type="text/css" href="css/Beaver.css">
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>
+    <script src="scripts/sketchBeaver.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@300&family=Work+Sans:wght@200&display=swap"
+        rel="stylesheet">
+
+
+
+    <meta charset="utf-8">
 </head>
 
-<!DOCTYPE html><html lang="en"><head>
-    <script src="Beaver/p5.js"></script>
-    <script src="Beaver/p5.sound.min.js"></script>
-    <link rel="stylesheet" href="Beaver.css">
-    <meta charset="utf-8">
-
-  </head>
-  <body>
-
-    <div class = "header">
+<body>
+    <div class="header">
         <h2>Study Buddy</h2>
-      </div>
+    </div>
 
-    <div id = "my-Beaver"></div>
+    <div id="my-Beaver"></div>
 
-    <div class = "catalogue">
-        <p>This spotify playlist is a Lofi genre playlist created by Lofi Girl, with a total of 500 songs  </p>
+    <div class="catalogue">
+        <p>This spotify playlist is a Lofi genre playlist created by Lofi Girl, with a total of 500 songs</p>
+        <a href="https://open.spotify.com/playlist/0vvXsWCC9xrXsKd4FyS8kM?si=733f64662d9a4148">Click Here to See Full
+            Playlist On Spotify</a>
     </div>
 
 
-    <div class = "instructions">
-      <p>Click near the figure to keep your buddy hydrated</p>
+    <button type="button" class="collapse">Open Buddy Interaction Instructions</button>
+    <div class="content">
+        <p>Click near the figure to keep your buddy hydrated</p>
+        <p>Click the books to change the motivational text</p>
     </div>
 
 
+    <!--
+  <div class = "instructions">
+    <p>Click near the figure to keep your buddy hydrated</p>
+    <p>Click the books to change the motivational text</p>
+  </div>
+-->
     <div>
-        <a href = "index.html" id = "homeButton">Go Back to Main Page</a>
+        <a href="index.html" id="homeButton">Go Back to Main Page</a>
     </div>
-     
-    <div class = "spotify">
-    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0vvXsWCC9xrXsKd4FyS8kM?utm_source=generator&theme=0" width="50%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-</div>
+
+    <div class="spotify">
+        <iframe style="border-radius:12px"
+            src="https://open.spotify.com/embed/playlist/0vvXsWCC9xrXsKd4FyS8kM?utm_source=generator&theme=0"
+            width="600" height="400" frameBorder="0" allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+    </div>
 
 
     <main>
     </main>
-    <script src="Beaver/sketch.js"></script>
-  
+    <script>
+        var coll = document.getElementsByClassName("collapse");
+        var i;
 
-</body></html>
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+    </script>
+    <!--Reference
+                       https://www.w3schools.com/howto/howto_js_collapsible.asp  
+                -->
 
-<!--
-    Reference
-    https://developer.spotify.com/documentation/web-api/
--->
+
+</body>
+
+</html>

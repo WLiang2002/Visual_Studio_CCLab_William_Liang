@@ -1,0 +1,92 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  /*background-color: #89b4c4;*/
+  background: #00467F;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #53A62D, #3cb9ff);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #53A62D, #3cb9ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.header {
+  top:10%;
+  width:100%;
+  text-align: center;
+  font-family: 'Bebas Neue', cursive;
+  font-family: 'Nunito', sans-serif;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 40px;
+  color:#FFFFFF;
+}
+
+.choose {
+  position:absolute;
+  top: 25%;
+  right: 33%;
+  font-family: 'Bebas Neue', cursive;
+  font-family: 'Nunito', sans-serif;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 15px;
+  color:#FFFFFF;
+}
+
+#aboutButton {
+  position:absolute;
+  top:10%;
+  right:5%;
+  text-align: center;
+  background-color: #3cb9ff;
+  padding: 30px 30px 30px 30px;
+  color:#FFFFFF;
+  border-radius: 30px;
+  text-decoration: none;
+  font-family: 'Bebas Neue', cursive;
+  font-family: 'Nunito', sans-serif;
+  font-family: 'Work Sans', sans-serif;
+  font-size:18px;
+  font-weight:bold;
+  letter-spacing: 1.5px;
+}
+
+#aboutButton:hover{
+  position:absolute;
+  text-decoration:none;
+  top:10%;
+  right:5%;
+  text-align: center;
+  background-color:#EAF2CE;
+  padding: 30px 30px 30px 30px;
+  color:darkblue;
+  border-radius: 30px;
+  font-size:18px;
+}
+
+#pandaImg {
+  position:absolute;
+  top:500px;
+  right:800px;
+  
+}
+
+#pandaImg:hover {
+  width: 400px;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+#beaverImg {
+  position:absolute;
+  top:500px;
+  left: 800px;
+  
+}
+
+#beaverImg:hover {
+  width: 400px;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+

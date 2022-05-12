@@ -4,15 +4,17 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
-    <link rel="stylesheet" type="text/css" href="style.css">
-
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="libraries/p5.min.js"></script>
     <script src="libraries/p5.sound.min.js"></script>
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@300&family=Work+Sans:wght@200&display=swap" rel="stylesheet">
 
   </head>
-  
-  <!--Website Title---> 
+
+  <!--Website Title--->
   <title>Study Buddy</title>
 
   <body>
@@ -20,39 +22,50 @@
     <div class = "header">
       <h2>Study Buddy</h2>
     </div>
-   
+
     <div class = "choose">
       <h1>Choose your studying partner by clicking on the images below</h1>
     </div>
-    
-      <a href = "about.html" id = "aboutButton">About this Website</a>
-       
 
-    <div id = "pandaImg">
-      <a href = "Panda.html"> 
-        <img border = "0" src = "Assets/Panda.jpeg" width = "300" height = "300">
-      </a>
+      <a href = "about.html" id = "aboutButton">About this Website</a>
+
+    <div class = "imgDiv"  >
+      <div id = "pandaImg">
+        <a href = "Panda.html">
+          <!--<img border = "0" src = "Assets/Panda.jpeg" width = "400" height = "400">-->
+          <img border = "0" src = "Assets/Big Panda.jpg" width = "400" height = "400">
+        </a>
+        
+        </div>
+     
+      <div id = "beaverImg">
+          <a href = "Beaver.html">
+            <img border = "0" src = "Assets/Beaver.jpeg" width = "400" height = "400">
+          </a>
       </div>
 
 
-    <div id = "beaverImg">
-        <a href = "Beaver.html"> 
-          <img border = "0" src = "Assets/Beaver.jpeg" width = "300" height = "300">
-        </a>
+
     </div>
 
 
+   
+      
 
 
 
-
-    <script src="sketch.js"></script>
+    
   </body>
 </html>
 
 <!--
-  Reference 
+  All References
   https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_link_image
   https://www.w3schools.com/css/css3_shadows_box.asp
+  https://p5js.org/examples/color-linear-gradient.html
+  https://developer.spotify.com/documentation/web-api/
+  https://www.w3schools.com/html
+
+  And help from Professor Stavros
 
 -->
