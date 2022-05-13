@@ -64,10 +64,22 @@ body {
   font-size:18px;
 }
 
+
+.imgDiv {
+ 
+  position:relative;
+  width: 1100px;
+  height: 200px;
+  top:10%;
+  left:30%;
+  border: 3px #00467F;
+}
+
+
 #pandaImg {
   position:absolute;
-  top:500px;
-  right:800px;
+  top:350px;
+  right:100px;
   
 }
 
@@ -78,8 +90,8 @@ body {
 
 #beaverImg {
   position:absolute;
-  top:500px;
-  left: 800px;
+  top:350px;
+  left: 50px;
   
 }
 
