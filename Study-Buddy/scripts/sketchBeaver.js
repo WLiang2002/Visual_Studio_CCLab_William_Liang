@@ -193,18 +193,14 @@ class Beaver {
     fill("#7D412C");
     ellipse(0, 0, 80, 80);
     fill(0);
+
+      //eyes
+      fill(255);
+      ellipse(-16, -10, 20);
+      ellipse(16, -10, 20);
     endShape();
 
-    beginShape();
-    //eyes
-
-    fill(0);
-    ellipse(15, -10, 10, 8);
-    fill(0);
-
-    fill(0);
-    ellipse(-15, -10, 10, 8);
-    endShape();
+    
     pop();
     //mouth
     fill(0);
@@ -254,6 +250,30 @@ class Beaver {
       map(sin(frameCount * 0.02), -1, 1, -30, -30),
       map(sin(frameCount * 0.05), -1, 1, 20, 70),
     ];
+
+        
+    //eye movement
+    push();
+    let xc = constrain(mouseX - width/2, 10, 20);
+    let xs = constrain(mouseY - height/2, -12, -8);
+    let xc2 = constrain(mouseX - width/2, -20, -10);
+   
+
+
+    //eye 1
+    fill(0);
+    circle(xc - width/2 , xs - (height/2) ,10)
+  
+    //eye 2
+    circle(xc2 - width/2 , xs - (height/2) ,10)
+
+    
+    pop();
+    
+    
+
+
+
   }
 
   drink() {

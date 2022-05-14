@@ -12,7 +12,7 @@ let index = 0;
 
 function setup() {
   let canvas = createCanvas(windowWidth, 500);
-  canvas.id ("my-Panda");
+  canvas.id("my-Panda");
   panda = new Panda(0, 0);
 
   c1 = color("#53A62D");
@@ -34,7 +34,7 @@ function draw() {
 
   Table();
   drink();
-  
+
 
   push();
   textSize(30)
@@ -63,24 +63,24 @@ function drink() {
       translate(windowWidth / 2, 250);
       pop();
 
-      
+
       push();
       fill(255)
       noStroke()
       ellipse(40, -50, 10, 10)
       ellipse(60, -70, 20, 20)
       ellipse(100, -140, 200, 100)
-      translate(windowWidth / 2, 250);  
+      translate(windowWidth / 2, 250);
       pop();
-     
-      
+
+
       push();
       textSize(15);
       fill(0);
       text("Remember to keep ", 30, -145);
       text("yourself hydrated too!", 30, -125);
       pop();
-      
+
     }
   }
 }
@@ -98,8 +98,8 @@ function mousePressed() {
     if (index == moti.length) {
       index = 0;
     }
-    
-    
+
+
   }
 }
 
@@ -166,18 +166,18 @@ class Panda {
     this.size = size;
     this.rArm = [100, 140];
     this.lArm = [100, 140];
-    
+
   }
 
   display() {
-   
-    
+
+
     //body
     beginShape();
     fill(255)
     ellipse(0, 60, 50, 60)
     endShape();
-    
+
     push();
     //face
     beginShape();
@@ -191,19 +191,17 @@ class Panda {
     fill(0);
     endShape();
 
-  
+
 
     beginShape();
     //eyes
     rotate(PI / 4);
     ellipse(10, -15, 25, 18);
-    fill(255);
-    ellipse(13, -15, 10, 8);
+
     fill(0);
     rotate(PI / 2);
     ellipse(10, 15, 25, 18);
-    fill(255);
-    ellipse(13, 15, 10, 8);
+
     endShape();
     pop();
     //mouth
@@ -213,8 +211,8 @@ class Panda {
     //not done yet
     curve(-12, 20, 0, 18, -10, 18, 0, 20)
     curve(12, 20, 0, 18, 10, 18, 0, 20)
-    
-  
+
+
     //left arm
     push();
     beginShape();
@@ -225,7 +223,7 @@ class Panda {
     curveVertex(-20, 50);
     endShape();
     pop();
-    
+
     //right arm
     push();
     beginShape();
@@ -237,40 +235,57 @@ class Panda {
     endShape();
     pop();
 
-    translate(windowWidth/2, 250);
+    translate(windowWidth / 2, 250);
   }
 
-    update() {
-      this.rArm = [
-        map(sin(frameCount * -0.05), -1, 1, 30, 29),
-        map(sin(frameCount * -0.05), -1, 1, 20, 70),
-      ];
-      this.lArm = [
-        map(sin(frameCount * 0.02), -1, 1, -30, -30),
-        map(sin(frameCount * 0.05), -1, 1, 20, 70),
-      ];
-    }
-  
-    drink() {
-      if (mouseIsPressed === true) {
-        if (
-          mouseX <= windowWidth / 2 + 100 &&
-          mouseX >= windowWidth / 2 - 100 &&
-          mouseY >= 150 &&
-          mouseY <= 400
-        ) {
-          this.rArm = [
-            map(sin(frameCount * 0.08), -1, 1, 20, 20),
-            map(sin(frameCount * 0.08), -1, 1, 30, 50),
-          ];
-          this.lArm = [
-            map(sin(frameCount * 0.08), -1, 1, -20, -20),
-            map(sin(frameCount * 0.08), -1, 1, 30, 50),
-          ];
-        }
+  update() {
+    this.rArm = [
+      map(sin(frameCount * -0.05), -1, 1, 30, 29),
+      map(sin(frameCount * -0.05), -1, 1, 20, 70),
+    ];
+    this.lArm = [
+      map(sin(frameCount * 0.02), -1, 1, -30, -30),
+      map(sin(frameCount * 0.05), -1, 1, 20, 70),
+    ];
+
+    //eye movement
+    push();
+    let xc = constrain(mouseX - width / 2, 10, 17);
+    let xs = constrain(mouseY - height / 2, -10, -2);
+    let xc2 = constrain(mouseX - width / 2, -20, -10);
+
+    //eye 1
+
+    fill(255)
+    circle(xc - width / 2, xs - (height / 2), 10)
+
+    //eye 2
+    circle(xc2 - width / 2, xs - (height / 2), 10)
+    pop();
+
+
+  }
+
+  drink() {
+    if (mouseIsPressed === true) {
+      if (
+        mouseX <= windowWidth / 2 + 100 &&
+        mouseX >= windowWidth / 2 - 100 &&
+        mouseY >= 150 &&
+        mouseY <= 400
+      ) {
+        this.rArm = [
+          map(sin(frameCount * 0.08), -1, 1, 20, 20),
+          map(sin(frameCount * 0.08), -1, 1, 30, 50),
+        ];
+        this.lArm = [
+          map(sin(frameCount * 0.08), -1, 1, -20, -20),
+          map(sin(frameCount * 0.08), -1, 1, 30, 50),
+        ];
       }
     }
   }
+}
 
 
 function setGradient(x, y, w, h, c1, c2, axis) {
